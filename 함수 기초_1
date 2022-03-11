@@ -1,0 +1,20 @@
+// 문제 : 아래가 실행되도록 함수를 만들어주세요.
+
+#include <stdio.h>
+
+#pragma warning (disable: 4996)
+
+void sol1(){
+  printf("sol1 호출\n");
+}
+
+void sol2(){
+  printf("sol2 호출\n");
+}
+
+int main(void) {
+  sol1();
+  sol2();
+
+  return 0;
+}
