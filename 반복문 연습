@@ -1,0 +1,32 @@
+// 문제 : 음수 200부터 100사이의 짝수 중에서 3의 배수가 아닌 수의 합과 3의 배수인 수의 // 합을 각각 출력해주세요.
+
+#include <stdio.h>
+
+#pragma warning (disable: 4996)
+
+int main(void) {
+  
+  int sum1 = 0;
+  int sum2 = 0;
+
+  int temp = 0;
+
+  for(int i=-200;i<=100;i+=2){
+    
+    temp = i % 3;
+
+    if(temp != 0){
+      sum1 += i;
+    }
+
+    if(temp == 0){
+      sum2 += i;
+    }
+  }
+  
+  printf("3의 배수가 아닌 수의 합 : %d\n3의 배수인 수의 합 : %d\n", sum1, sum2);
+
+
+  
+  return 0;
+}
