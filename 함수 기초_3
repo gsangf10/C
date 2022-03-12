@@ -1,0 +1,25 @@
+// 문제 : 아래가 실행되도록 함수를 만들어주세요.
+
+#include <stdio.h>
+
+#pragma warning (disable: 4996)
+
+void sol1(int d, char c, float f){
+  printf("== sol1 ==\n");
+  printf("%d\n", d);
+  printf("%c\n", c);
+  printf("%f\n", f);
+}
+
+void sol2(float f, int d){
+  printf("== sol2 ==\n");
+  printf("%f\n", f);
+  printf("%d\n", d);
+}
+
+int main(void) {
+  sol1(10, 'k', 23.5);
+  sol2(5.5, 11);
+
+  return 0;
+}
