@@ -1,0 +1,36 @@
+// 문제 : 아래가 실행되도록 함수를 만들어주세요.
+
+#include <stdio.h>
+
+#pragma warning (disable: 4996)
+
+int sol1(int n, char c, float f){
+
+  return n;
+}
+
+char sol2(float f, int n){
+
+  return 'T';
+}
+
+long sol3(){
+
+  return 33;
+}
+
+double sol4(){
+
+  return 3.1418;
+}
+
+int main(void) {
+  int i = sol1(10, 'k', 23.5);
+  char c = sol2(5.5, 11);
+  long l = sol3();
+  double d = sol4();
+
+  printf("%d\n%c\n%d\n%lf\n",i,c,l,d);
+
+  return 0;
+}
