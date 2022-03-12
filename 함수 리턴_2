@@ -1,0 +1,29 @@
+// 문제 : 입력받은 숫자가 10이라고 할때 1부터 10 사이에 존재하는 모든 소수를 출력하는 함수 구현
+
+#include <stdio.h>
+
+#pragma warning (disable: 4996)
+
+int print_1_to_n_prime_numbers(int n){
+
+  int s;
+
+  for(int j=1;j<=n;j++){
+    s = 0;
+    for(int i=1;i<=j;i++){
+      if(j%i==0){
+        s += i;
+      }
+    }
+    if(s == j + 1){
+      printf("%d\n", j);
+    }
+  }
+
+  return 0;
+}
+
+int main(void) {
+  print_1_to_n_prime_numbers(10);
+  return 0;
+}
