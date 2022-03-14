@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+#pragma warning (disable: 4996)
+
+// 문제 : 1부터 n 사이의 수 중에서 소수의 합을 반환하는 함수 `get_1_to_n_prime_numbers_sum` 를 구현해주세요.
+
+int is_prime_number(int number) {
+  if ( number <= 1 ) {
+    return 0;
+  }
+
+  for ( int i = 2; i < number; i++ ) {
+    if ( number % i == 0 ) {
+      // 리턴을 하면 함수가 그 즉시 종료됩니다.
+      return 0;
+    }
+  }
+
+  return 1;
+}
+
+// 1부터 n 사이의 수 중에서 소수의 개수 반환하는 함수
+int get_1_to_n_prime_numbers_sum(int n) {
+  // 구현
+  int sum = 0;
+
+  for(int i=1;i<n;i++){
+    if(is_prime_number(i)){
+      sum += i;
+    }
+  }
+
+  return sum;
+}
+
+int main() {
+  int sum;
+  int number;
+
+  number = 1000;
+  sum = get_1_to_n_prime_numbers_sum(number);
+  printf("1부터 %d사이에 존재하는 소수의 개수 : %d개\n", number, sum);
+  // 출력 => 1부터 1000사이에 존재하는 소수의 합 : 76127
+
+  number = 2000;
+  sum = get_1_to_n_prime_numbers_sum(number);
+  printf("1부터 %d사이에 존재하는 소수의 개수 : %d개\n", number, sum);
+  // 출력 => 1부터 2000사이에 존재하는 소수의 합 : 277050
+
+  return 0;
+}
