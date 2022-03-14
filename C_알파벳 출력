@@ -1,0 +1,53 @@
+// 문제 : 3가지 다른 방법으로 a부커 z까지 출력하는 함수 구현
+// 힌트 : 사실 C언어에서 'a'는 따로 존재하지 않는다. 'a'는 사실 97의 또 다른 이름이다.
+// 힌트 : C언어에서 'a'는 97과 완전히 같은 뜻이다.
+// 힌트 : C언어에서 'b'는 98과 완전히 같은 뜻이다.
+
+#include <stdio.h>
+
+#pragma warning (disable: 4996)
+
+int print_a_to_z_v1(){
+
+  char c = 'a';
+  char z = 'z';
+  
+  for(;c<=z;c++){
+    printf("%c ", c);
+  }
+
+  printf("\n\n");
+
+  return 0;
+}
+
+int print_a_to_z_v2(){
+
+  for(int i=97;i<=122;i++){
+    printf("%c ", i);
+  }
+
+  printf("\n\n");
+
+  return 0;
+}
+
+int print_a_to_z_v3(){
+
+  char s[] = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
+
+  printf("%s\n", s);
+
+  return 0;
+}
+
+int main(void) {
+  printf("== 정답 v1 ==\n");
+  print_a_to_z_v1();
+  printf("== 정답 v2 ==\n");
+  print_a_to_z_v2();
+  printf("== 정답 v3 ==\n");
+  print_a_to_z_v3();
+
+  return 0;
+}
