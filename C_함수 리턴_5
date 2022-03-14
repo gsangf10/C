@@ -1,0 +1,23 @@
+// 문제 : n부터 m 사이에 존재하는 정수의 합을 반환하는 함수를 만들어주세요.
+
+#include <stdio.h>
+
+#pragma warning (disable: 4996)
+
+int n_to_m_sum(int n, int m){
+
+  int sum = 0;
+
+  for(int i=n+1;i<m;i++){
+    sum += i;
+  }
+  
+  return sum;
+}
+
+int main(void) {
+  
+  printf("%d\n", n_to_m_sum(1,10));
+  
+  return 0;
+}
