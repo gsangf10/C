@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+  int a = 20;
+
+  printf("== 싱글포인터 ==\n");
+  int* p;
+  p = &a;
+  printf("*p : %d\n", *p);
+  printf("a : %d\n", a);
+
+  printf("== 2중포인터 ==\n");
+  int** pp;
+  pp = &p;
+  printf("*pp : %ld\n", (long)*pp);
+  printf("p : %ld\n", (long)p);
+
+  printf("**pp : %d\n", **pp);
+  printf("a : %d\n", a);
+
+  printf("== 3중포인터 ==\n");
+  int*** ppp;
+  ppp = &pp;
+  printf("*ppp : %ld\n", (long)*ppp);
+  printf("pp : %ld\n", (long)pp);
+
+  printf("**ppp : %ld\n", (long)**ppp);
+  printf("p : %ld\n", (long)p);
+  
+  printf("***ppp : %d\n", ***ppp);
+  printf("a : %d\n", a);
+
+  return 0;
+}
